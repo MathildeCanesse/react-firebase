@@ -1,0 +1,232 @@
+.wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 520px;
+    width: 320px;
+    background-color: white;
+}
+
+.wrapper .inner {
+    overflow: scroll;
+    height: 520px;
+    width: 100%;
+    padding-top: 64px;
+    background: #f2f2f2;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+.wrapper .inner::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.wrapper .inner .content {
+    padding: 10.66666667px;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.nav {
+    height: 64px;
+    width: 100%;
+}
+
+.nav .default-nav {
+    height: 64px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 110;
+    background-color: rgb(51,51,51);
+    border-bottom: 3px solid #ea1c0d;
+    color: #ffffff;
+}
+
+.nav .default-nav .main-nav {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .default-nav .main-nav .toggle {
+    height: 32px;
+    width: 32px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/104946/ic_arrow_back_white_48dp.png);
+    background-size: contain;
+    margin: 16px;
+    float: left;
+}
+
+.nav .default-nav .main-nav .toggle:hover {
+    cursor: pointer;
+}
+
+.nav .default-nav .main-nav .options {
+    height: 32px;
+    width: 32px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/104946/ic_more_vert_white_48dp.png);
+    background-size: contain;
+    margin: 16px;
+    position: absolute;
+    right: 0;
+}
+
+.nav .default-nav .main-nav .options:hover {
+    cursor: pointer;
+}
+
+.nav .default-nav .main-nav .main-nav-item .main-nav-item-link {
+    display: block;
+    text-align: center;
+    line-height: 64px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.bottom {
+    width: 100%;
+    height: 64px;
+}
+
+.bottom .input {
+    height: 64px;
+    background: rgba(76, 75, 75, 0.84);
+    border: none;
+    width: calc(90% - 34px);
+
+    top: 0;
+    padding: 0 5% 0 5%;
+    resize: none;
+    overflow: scroll;
+    padding-top: 24px;
+    font-weight: 300;
+    font-size: 13px;
+    padding-right: 50px;
+}
+
+.bottom .input:focus {
+    outline: none;
+}
+
+.bottom .input::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.bottom .send {
+    position: relative;
+    height: 42.66666667px;
+    width: 42.66666667px;
+    border-radius: 50%;
+    border: 0;
+    background: #F44336;
+    color: #ffffff;
+    top: -65px;
+    left: 130px;
+}
+
+.bottom .send:before {
+    content: '';
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/104946/ic_send_white_48dp.png) no-repeat center center;
+    background-size: 25.6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.bottom .send:focus {
+    outline: none;
+}
+
+.bottom .send:hover {
+    cursor: pointer;
+}
+
+.message-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 10.66666667px 0;
+    padding: 10.66666667px 0;
+}
+
+
+
+.message-wrapper .text-wrapper {
+    padding: 10.66666667px;
+    min-height: 42.66666667px;
+    width: 60%;
+    margin: 0 10.66666667px;
+    box-shadow: 0px 1px 0px 0px rgba(50, 50, 50, 0.3);
+    border-radius: 2px;
+    font-weight: 300;
+    position: relative;
+    word-break: break-word;
+    text-align: justify;
+}
+
+.message-wrapper .text-wrapper:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+ .message-wrapper.them .text-wrapper {
+    background: rgba(244, 67, 54, 0.82);
+    float: left;
+    color: #ffffff;
+}
+
+.message-wrapper.them .circle-wrapper {
+    background: transparent;
+    float: left;
+    color: rgb(34,34,34);
+}
+
+.message-wrapper.them .text-wrapper:before {
+    border-width: 0 10px 10px 0;
+    border-color: transparent rgba(244, 67, 54, 0.82) transparent transparent;
+    position: absolute;
+    top: 0;
+    left: -9px;
+}
+
+.message-wrapper.me .circle-wrapper, .message-wrapper.me .text-wrapper {
+    background: transparent;
+    float: right;
+    color: #333333;
+}
+
+.message-wrapper.me .text-wrapper {
+    background: #ffffff;
+}
+
+.message-wrapper.me .text-wrapper:before {
+    border-width: 10px 10px 0 0;
+    border-color: #ffffff transparent transparent transparent;
+    position: absolute;
+    top: 0;
+    right: -9px;
+}
+
+@media (max-width: 560px) {
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+    }
+    .wrapper .inner {
+        height: 100%;
+        height: 100vh;
+    }
+}
