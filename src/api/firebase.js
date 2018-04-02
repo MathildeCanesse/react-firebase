@@ -1,18 +1,6 @@
 import * as firebase from 'firebase';
 
 class FirebaseApi {
-  static initAuth() {
-    return new Promise((resolve, reject) => {
-      const unsub = firebase.auth().onAuthStateChanged(
-        user => {
-          unsub();
-          resolve(user);
-        },
-        error => reject(error)
-      );
-    });
-  }
-
   static databasePush(path, value) {
     return new Promise((resolve, reject) => {
       firebase
@@ -28,8 +16,8 @@ class FirebaseApi {
     });
   }
 
-  static databaseSet(value) {
-    return firebase.database().ref().child(value);
+  static databaseSet(path, value) {
+    return firebase.database().ref(path).child(value);
   }
 
   static unsubDatabase(path) {
