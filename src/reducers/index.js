@@ -2,8 +2,8 @@ import assign from 'lodash/assign';
 
 import { combineReducers } from 'redux';
 
-import usersReducer from './users';
-import chatReducer from './chat';
+import usersReducer from './UsersReducer';
+import chatReducer from './ChatReducer';
 
 const allReducers = combineReducers(
   assign(usersReducer, chatReducer)
