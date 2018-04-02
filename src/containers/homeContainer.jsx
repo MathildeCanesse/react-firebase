@@ -7,7 +7,7 @@ import {
   isNameValidate,
   updateName,
   validateName,
-} from '../reducers/users';
+} from '../reducers/UsersReducer';
 
 const mapStateToProps = createStructuredSelector({
   name: getName,
