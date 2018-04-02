@@ -7,3 +7,5 @@ const config = {
   storageBucket: 'react-tchat-a0573.appspot.com',
   messagingSenderId: '507036688490',
 };
+
+export default config;
