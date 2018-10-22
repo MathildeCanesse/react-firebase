@@ -1,4 +1,5 @@
-import * as firebase from 'firebase';
+import { firebase } from "@firebase/app";
+import "@firebase/database";
 
 class FirebaseApi {
   static databasePush(path, value) {
@@ -6,7 +7,7 @@ class FirebaseApi {
       firebase
         .database()
         .ref(path)
-        .push(value, (error) => {
+        .push(value, error => {
           if (error) {
             reject(error);
           } else {
@@ -17,11 +18,17 @@ class FirebaseApi {
   }
 
   static databaseSet(path, value) {
-    return firebase.database().ref(path).child(value);
+    return firebase
+      .database()
+      .ref(path)
+      .child(value);
   }
 
   static unsubDatabase(path) {
-    return firebase.database().ref(path).off();
+    return firebase
+      .database()
+      .ref(path)
+      .off();
   }
 
   static databasePathValueLimitToLast(path, limit, handler) {
@@ -29,7 +36,7 @@ class FirebaseApi {
       .database()
       .ref(path)
       .limitToLast(limit)
-      .on('value', handler);
+      .on("value", handler);
   }
 }
 
