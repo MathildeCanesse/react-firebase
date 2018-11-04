@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import ChatContainer from '../containers/ChatContainer';
-import User from './User';
-import '../assets/css/home.css';
+import ChatContainer from "../containers/chatContainer";
+import User from "./User";
+import "../assets/css/home.css";
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
+      name: ""
     };
   }
 
@@ -21,7 +21,7 @@ class Home extends Component {
 
   updateName = e => {
     this.setState({
-      name: e.target.value,
+      name: e.target.value
     });
   };
 
@@ -30,12 +30,11 @@ class Home extends Component {
     return (
       <div id="main-home">
         <h3> Messages </h3>
-        {name && nameValidate
-          ? <ChatContainer name={name} />
-          : <User
-            updateName={this.updateName}
-            validateName={this.validate}
-          />}
+        {name && nameValidate ? (
+          <ChatContainer name={name} />
+        ) : (
+          <User updateName={this.updateName} validateName={this.validate} />
+        )}
       </div>
     );
   }

@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-import HomeContainer from '../containers/HomeContainer';
+import HomeContainer from "../containers/homeContainer";
 
-import logo from '../assets/images/logo.svg';
-import '../assets/css/app.css';
+import logo from "../assets/images/logo.svg";
+import "../assets/css/app.css";
 
 const App = props => (
   <div className="App">
@@ -25,7 +25,7 @@ const App = props => (
 );
 
 App.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.object
 };
 
 export default App;
