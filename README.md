@@ -11,5 +11,5 @@
 
 
 ## Todo :
-At the moment, all the logic connecting the app with firebase is dirty. The code is in `src/components/Chat.js`.
+At the moment, all the logic connecting the app with firebase is dirty. The code is in `src/components/ChatRoom.js`.
 You must manage all the firebases async actions with the [**redux-sagas**](https://github.com/redux-saga/redux-saga) library in order to make a cleaner code. 

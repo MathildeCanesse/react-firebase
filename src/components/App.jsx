@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 
-import HomeContainer from '../containers/homeContainer';
+import HomeContainer from '../containers/HomeContainer';
 
 import logo from '../assets/images/logo.svg';
 import '../assets/css/app.css';

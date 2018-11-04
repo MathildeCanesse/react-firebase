@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ChatContainer from '../containers/chatContainer';
+import ChatContainer from '../containers/ChatContainer';
 import User from './User';
 import '../assets/css/home.css';
 
