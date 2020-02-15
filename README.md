@@ -14,11 +14,12 @@ _A sample tchat app using :_
 
 To override these variables:
 
-`REACT_APP_FIREBASE_KEY`
-`REACT_APP_FIREBASE_DOMAIN`
-`REACT_APP_FIREBASE_DATABASE`
-`REACT_APP_FIREBASE_PROJECT_ID`
-`REACT_APP_FIREBASE_STORAGE_BUCKET`
-`REACT_APP_FIREBASE_SENDER_ID`
 
-- Once dependencies installed, run: `npm start` or `yarn start`, your default browser will automatically open a new window.
+- `REACT_APP_FIREBASE_KEY`
+- `REACT_APP_FIREBASE_DOMAIN`
+- `REACT_APP_FIREBASE_DATABASE`
+- `REACT_APP_FIREBASE_PROJECT_ID`
+- `REACT_APP_FIREBASE_STORAGE_BUCKET`
+- `REACT_APP_FIREBASE_SENDER_ID`
+
+- Once dependencies installed, run: `yarn start`, your default browser will automatically open a new window.
